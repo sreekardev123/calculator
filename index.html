@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <style>
+    
+        .output{
+            border: 2px solid orchid;
+            height: 540px;
+            width: 450px;
+            margin: 35px;
+            border-radius: 20px;
+            background-image: linear-gradient(rgb(162, 198, 134),rgb(182,125,35));
+            background-position: center;
+            background-size: cover;
+            
+            
+        }
+       input{
+        border-radius: 20px;
+        text-align: right;
+       }
+       res{
+        color: black;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="output">
+        <input type="text" id="displayscreen" placeholder="0">
+
+        <div class="allset">
+            <div>
+            <button onclick="clearScreen()" class="AC">AC</button>
+            <button onclick="clearlastcharacter()">c</button>
+            <button onclick="addvalue('+/-')" class="operators">+/-</button>
+            <button onclick="addvalue('/')" class="operators">/</button>
+        </div>
+        <div>
+            <button onclick="addvalue('7')">7</button>
+            <button onclick="addvalue('8')">8</button>
+            <button onclick="addvalue('9')">9</button>
+            <button onclick="addvalue('*')" class="operators">x</button>
+        </div>
+         <div>
+            <button onclick="addvalue('4')">4</button>
+            <button onclick="addvalue('5')">5</button>
+            <button onclick="addvalue('6')">6</button>
+            <button onclick="addvalue('-')" class="operators">-</button>
+        </div>
+        <div>
+            <button onclick="addvalue('1')">1</button>
+            <button onclick="addvalue('2')">2</button>
+            <button onclick="addvalue('3')">3</button>
+            <button onclick="addvalue('+')" class="operators">+</button>
+       </div>
+       <div>
+        <button onclick="addvalue('%')" class="operators">%</button>
+        <button onclick="addvalue('0')">0</button>
+        <button onclick="addvalue('.')" class="operators">.</button>
+        <button onclick="calculate()" class="res">=</button>
+       </div>
+ </div>
+    </div>
+    
+
+    <script>
+         displayscreen=document.getElementById("displayscreen");
+        digits=document.getElementById("digits");
+
+        function addvalue(xy) {
+            displayscreen.value+=xy
+            
+        }
+
+        function calculate(){
+            cals=eval(displayscreen.value)
+            displayscreen.value=cals
+        }
+        
+       
+        function clearScreen() {
+        displayscreen.value=""
+      }
+      function clearlastcharacter(){
+       displayscreen.value=displayscreen.value.slice(0,-2);
+      }
+    </script>
+</body>
+</html>

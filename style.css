@@ -1,0 +1,43 @@
+.operators{
+    color: white;
+    /* background-image: linear-gradient(rgb(246, 147, 9, 0),rgb(41, 22, 213)); */
+    color:rgb(8,8,8);
+    background-color:burlywood ;
+    font-size: 20px;
+
+}
+#displayscreen:hover{
+    border: 2px solid orange;
+
+}
+button:hover{
+    color: orange;
+    border-radius: 10px;
+    border-color: rgb(134, 21, 240);
+    
+    
+    
+
+}
+button{
+     height: 55px;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 23px;
+    font-size: 19px;
+    background-color: rgb(224, 236, 255);
+    color: black;
+}
+#displayscreen{
+    height: 110px;
+    width: 443px;
+    margin-top: 10px;
+    border: 2px solid brown;
+    font-size: 50px;
+    color: rgb(5, 213, 26);
+    
+
+}
+.res{
+    color: rgb(211, 37, 37);
+}
